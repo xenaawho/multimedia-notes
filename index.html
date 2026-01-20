@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Multimedia Notes</h2>
+    
+    <div class="input-group">
+        <textarea id="noteText" placeholder="Tulis catatan di sini..."></textarea>
+        
+        <div class="actions">
+            <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;">
+            
+            <button class="btn-media" onclick="document.getElementById('fileInput').click()">🖼️ Foto/Video</button>
+            <button class="btn-media" id="recordBtn">🎤 Rekam Suara</button>
+            <button class="btn-save" onclick="saveNote()">Simpan Catatan</button>
+        </div>
+        
+        <div id="previewArea"></div>
+    </div>
+
+    <div id="notesList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
